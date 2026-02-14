@@ -1,0 +1,53 @@
+:root {
+    --primary-color: #fb4e0c;
+    --secondary-color: #0e1f2f;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1; 
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8; 
+}
+@keyframes countUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+.stat-card:hover .stat-glow {
+    opacity: 1;
+}
+.animate-scroll {
+    animation: scroll 40s linear infinite;
+}
+.animate-scroll:hover {
+    animation-play-state: paused;
+}.text-gradient-orange {
+    background: linear-gradient(to right, #fb4e0c, #ff8a5c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
