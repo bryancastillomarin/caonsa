@@ -37,6 +37,9 @@ This is a static website project, styled with [Tailwind CSS](https://tailwindcss
                 "background-dark": "#0e1f2f",
                 "surface-dark": "#162a3d",
                 "brand-grey": "#8a8a8a",
+                "neutral-gray": "#8a8a8a",
+                "surface-dark": "#1a242d",
+                "surface-darker": "#0b1824"
             },
             fontFamily: {
                 "display": ["Space Grotesk", "sans-serif"]
