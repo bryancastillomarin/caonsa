@@ -100,6 +100,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const modalImage1 = document.getElementById("modalImage1");
     const modalImage2 = document.getElementById("modalImage2");
     const modalImage3 = document.getElementById("modalImage3");
+    const menuButton = document.getElementById("menuButton");
+    const menuButtonClose = document.getElementById("menuButtonClose");
+    const menu = document.getElementById("menu");
 
     document.getElementById("modalClose").addEventListener("click", function() {
         modal.classList.add("hidden");
@@ -129,13 +132,6 @@ document.addEventListener('DOMContentLoaded', function() {
         modal.classList.remove("hidden");
     });
 
-    modal.addEventListener("click", function(event) {
-        console.log(event.target);
-        if (event.target === outerModal) {
-            modal.classList.add("hidden");
-        }    
-    });
-
     function populateModal(project) {
         modalTitle.textContent = project.title;
         modalService.textContent = project.service;
@@ -150,9 +146,28 @@ document.addEventListener('DOMContentLoaded', function() {
         modalImage3.src = project.imageUrl3;
     }
 
+    modal.addEventListener("click", function(event) {
+        if (event.target === outerModal) {
+            modal.classList.add("hidden");
+        }    
+    });
+
     document.addEventListener("keydown", function(event) {
         if (event.key === "Escape") {
             modal.classList.add("hidden");
         }
     });
+
+    menuButton.addEventListener("click", function() {
+        menuButton.classList.toggle("hidden");
+        menuButtonClose.classList.toggle("hidden");
+        menu.style.right = "0";
+    });
+
+    menuButtonClose.addEventListener("click", function() {
+        menuButton.classList.toggle("hidden");
+        menuButtonClose.classList.toggle("hidden");
+        menu.style.right = "-400px";
+    });
+
 });
