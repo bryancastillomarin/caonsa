@@ -13,11 +13,6 @@
 	</head>
 	<body class="bg-background-light text-slate-800 font-display antialiased">
 		<script src="main.js"></script>
-		<script>
-			document.addEventListener('DOMContentLoaded', function() {
-				if (window.setupCaonsaProjectModals) window.setupCaonsaProjectModals();
-			});
-		</script>
 		<nav class="fixed w-full z-50 top-0 bg-secondary/95 backdrop-blur-sm border-b border-white/10 shadow-sm transition-all duration-300" id="navbar">
 			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				<div class="flex justify-between items-center h-20">
@@ -556,7 +551,7 @@
 					<div class="h-64 bg-surface-dark rounded-lg opacity-50"></div>
 				</div>
 			</div>
-			<div class="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 lg:p-12 bg-black/80 backdrop-blur-sm transition-opacity duration-300">
+			<div class="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 lg:p-12 bg-black/80 backdrop-blur-sm transition-opacity duration-300" id="outerModal">
 				<button
 					class="absolute left-4 top-1/2 -translate-y-1/2 p-3 text-white/50 hover:text-primary hover:bg-white/5 rounded-full transition-all group hidden lg:flex items-center justify-center">
 					<span class="material-symbols-outlined text-4xl group-hover:-translate-x-1 transition-transform hidden">chevron_left</span>

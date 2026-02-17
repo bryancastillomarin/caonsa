@@ -88,7 +88,7 @@ const projectsData = {
 
 document.addEventListener('DOMContentLoaded', function() {
     const modal = document.getElementById("modal");
-    const modalClose = document.getElementById("modalClose");
+    const outerModal = document.getElementById("outerModal");
     const modalTitle = document.getElementById("modalTitle");
     const modalService = document.getElementById("modalService");
     const modalDescription1 = document.getElementById("modalDescription1");
@@ -129,6 +129,13 @@ document.addEventListener('DOMContentLoaded', function() {
         modal.classList.remove("hidden");
     });
 
+    modal.addEventListener("click", function(event) {
+        console.log(event.target);
+        if (event.target === outerModal) {
+            modal.classList.add("hidden");
+        }    
+    });
+
     function populateModal(project) {
         modalTitle.textContent = project.title;
         modalService.textContent = project.service;
@@ -142,5 +149,10 @@ document.addEventListener('DOMContentLoaded', function() {
         modalImage2.src = project.imageUrl2;
         modalImage3.src = project.imageUrl3;
     }
-});
 
+    document.addEventListener("keydown", function(event) {
+        if (event.key === "Escape") {
+            modal.classList.add("hidden");
+        }
+    });
+});
