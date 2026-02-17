@@ -2167,3 +2167,28 @@ video {
     color: rgb(243 244 246 / var(--tw-text-opacity, 1));
   }
 }
+
+@media (max-width: 766px) {
+  #menu {
+    display: flex;
+    width: 180px;
+    flex-direction: column;
+
+    position: absolute;
+    top: 80px;
+    right: -400px;
+
+    transition: right 0.5s ease-out;
+
+    background-color: var(--secondary-color);
+  }
+
+  #menu a {
+    width: 100%;
+    text-align: right;
+    padding: .5rem 2rem .5rem 0;
+    margin: 0;
+    border-width: 1px;
+    border-color: rgb(255 255 255 / 0.1);
+  }
+}
