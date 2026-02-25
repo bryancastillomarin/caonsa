@@ -52,12 +52,12 @@
 				<div class="absolute inset-0 bg-secondary/70 mix-blend-multiply"></div>
 				<div class="absolute inset-0 bg-gradient-to-t from-secondary via-transparent to-transparent opacity-90"></div>
 			</div>
-			<div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:text-left w-full mt-10">
+			<div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 sm:text-left w-full mt-10">
 				<div class="w-full px-12">
-					<h1 class="text-5xl sm:text-6xl md:text-7xl font-bold text-white leading-tight mb-6 tracking-tight">
+					<h1 class="hidden md:flex text-5xl sm:text-6xl md:text-7xl font-bold text-white leading-tight mb-6 tracking-tight">
 						CAONSA CONSTRUCCIONES
 					</h1>
-					<h2 class="text-4xl font-bold text-secondary mt-2 mb-6 text-white">
+					<h2 class="text-5xl md:text-4xl font-bold text-secondary mt-2 mb-6 text-white">
 						Ingeniería, Soldadura Especializada y Soluciones Estructurales
 					</h2>
 					<p class="text-lg sm:text-xl text-slate-200 mb-10 font-light leading-relaxed">
@@ -166,7 +166,7 @@
 						<div class="grid grid-cols-4 gap-4 ">
 							<img
 								alt="Soldador Corporativo Caonsa en acción"
-								class="w-2/3 object-cover rounded-lg shadow-lg mx-auto"
+								class="w-full sm:w-1/2 md:w-[60%] object-cover rounded-lg shadow-lg mx-auto"
 								data-alt="Soldador Corporativo Caonsa en acción"
 								src="./assets/img/sobre_nosotros.JPG" />
 						</div>
@@ -293,7 +293,7 @@
 		</section>
 		<section class="py-20 bg-white" id="proyectos">
 			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
+				<div class="flex flex-col md:flex-row justify-between mb-12 gap-4">
 					<div>
 						<span class="text-primary font-bold tracking-widest uppercase text-sm">Portafolio Reciente</span>
 						<h2 class="text-4xl font-bold text-secondary mt-2">Nuestros Proyectos</h2>
@@ -420,20 +420,20 @@
 							alt=""
 							class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
 							data-alt=""
-							src="./assets/img/refineria_olmeda.jpg" />
+							src="./assets/img/refineria_olmeca.jpg" />
 						<div
 							class="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
 						<div class="absolute bottom-0 left-0 p-8 w-full">
 							<div class="flex justify-between items-end">
 								<div>
 									<span class="inline-block px-2 py-1 bg-primary text-white text-xs font-bold rounded mb-2">2022</span>
-									<h3 class="text-2xl font-bold text-white mb-1">Refinería Olmeda</h3>
+									<h3 class="text-2xl font-bold text-white mb-1">Refinería Olmeca</h3>
 									<p class="text-slate-300 text-sm line-clamp-2">
-										Montaje de red contra incendio en la refinería olmeda
+										Montaje de red contra incendio en la refinería olmeca
 									</p>
 								</div>
 								<div class="bg-white/10 p-2 rounded-full backdrop-blur-sm group-hover:bg-primary transition-colors">
-									<span class="material-icons-outlined text-white" id="refineriaOlmeda">north_east</span>
+									<span class="material-icons-outlined text-white" id="refineriaOlmeca">north_east</span>
 								</div>
 							</div>
 						</div>
@@ -637,15 +637,9 @@
 							<h4 class="text-sm uppercase tracking-widest text-gray-500 font-semibold mb-4 border-b border-gray-700 pb-2">Detalles</h4>
 							<ul class="space-y-3">
 								<li class="flex items-start group">
-									Fecha de inicio: &nbsp; 
+									Fecha: &nbsp; 
 									<span class="text-gray-300 text-sm pt-0.5 group-hover:text-white transition-colors" id="modalStartDate">
 										{{Start date}}
-										</span>
-								</li>
-								<li class="flex items-start group">
-									Fecha de finalización: &nbsp; 
-									<span class="text-gray-300 text-sm pt-0.5 group-hover:text-white transition-colors" id="modalEndDate">
-										{{End date}}
 										</span>
 								</li>
 								<li class="flex items-start group">
