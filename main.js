@@ -5,6 +5,9 @@ const TREN_MAYA = "trenMaya";
 const DOMOS_CHETUMAL = "domosChetumal";
 const REFINERIA_OLMECA = "refineriaOlmeca";
 
+let isModalOpen = false;
+let isModalImageOpen = false;
+
 const projectsData = {
     "puentePeatonal": {
         title: "Puente Peatonal",
@@ -70,7 +73,9 @@ const projectsData = {
 
 document.addEventListener('DOMContentLoaded', function() {
     const modal = document.getElementById("modal");
+    const modalImage = document.getElementById("modalImage");
     const outerModal = document.getElementById("outerModal");
+    const outerModalImage = document.getElementById("outerModalImage");
     const modalTitle = document.getElementById("modalTitle");
     const modalService = document.getElementById("modalService");
     const modalDescription1 = document.getElementById("modalDescription1");
@@ -79,6 +84,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const modalLocation = document.getElementById("modalLocation");
     const modalImage1 = document.getElementById("modalImage1");
     const modalImage2 = document.getElementById("modalImage2");
+    const modalImage3 = document.getElementById("modalImage3");
     const menuButton = document.getElementById("menuButton");
     const menuButtonClose = document.getElementById("menuButtonClose");
     const menu = document.getElementById("menu");
@@ -86,29 +92,41 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById("modalClose").addEventListener("click", function() {
         modal.classList.add("hidden");
     });
+    document.getElementById("modalImageClose").addEventListener("click", function() {
+        modal.classList.remove("hidden");
+        modalImage.classList.add("hidden");
+        isModalOpen = true;
+        isModalImageOpen = false;
+    });
     document.getElementById(PUENTE_PEATONAL).addEventListener("click", function() {
         populateModal(projectsData[PUENTE_PEATONAL]);
         modal.classList.remove("hidden");
+        isModalOpen = true;
     });
     document.getElementById(HOTEL_TULUM).addEventListener("click", function() {
         populateModal(projectsData[HOTEL_TULUM]);
         modal.classList.remove("hidden");
+        isModalOpen = true;
     });
     document.getElementById(AEROPUERTO_CANCUN).addEventListener("click", function() {
         populateModal(projectsData[AEROPUERTO_CANCUN]);
         modal.classList.remove("hidden");
+        isModalOpen = true;
     });
     document.getElementById(TREN_MAYA).addEventListener("click", function() {
         populateModal(projectsData[TREN_MAYA]);
         modal.classList.remove("hidden");
+        isModalOpen = true;
     });
     document.getElementById(DOMOS_CHETUMAL).addEventListener("click", function() {
         populateModal(projectsData[DOMOS_CHETUMAL]);
         modal.classList.remove("hidden");
+        isModalOpen = true;
     });
     document.getElementById(REFINERIA_OLMECA).addEventListener("click", function() {
         populateModal(projectsData[REFINERIA_OLMECA]);
         modal.classList.remove("hidden");
+        isModalOpen = true;
     });
 
     function populateModal(project) {
@@ -122,15 +140,51 @@ document.addEventListener('DOMContentLoaded', function() {
         modalImage2.src = project.imageUrl2;
     }
 
+    modalImage1.addEventListener("click", function(e) {
+        showImageModal(e.target.src);
+    });
+
+    modalImage2.addEventListener("click", function(e) {
+        showImageModal(e.target.src);
+    });
+
+    function showImageModal(src) {
+        modal.classList.add("hidden");
+        modalImage.classList.remove("hidden");
+        modalImage3.src = src;
+        isModalOpen = false;
+        isModalImageOpen = true;
+        console.log({isModalOpen, isModalImageOpen});
+    }
+
     modal.addEventListener("click", function(event) {
         if (event.target === outerModal) {
             modal.classList.add("hidden");
+            isModalOpen = false;
         }    
     });
 
+    modalImage.addEventListener("click", function(event) {
+        if(event.target === outerModalImage) {
+            modalImage.classList.add("hidden");
+            modal.classList.remove("hidden");
+            isModalImageOpen = false;
+            isModalOpen = true;
+        }
+    })
+
     document.addEventListener("keydown", function(event) {
         if (event.key === "Escape") {
-            modal.classList.add("hidden");
+            if(isModalOpen) {
+                modal.classList.add("hidden");
+                isModalOpen = false;
+            }
+            if(isModalImageOpen) {
+                modalImage.classList.add("hidden");
+                modal.classList.remove("hidden");
+                isModalImageOpen = false;
+                isModalOpen = true;
+            }
         }
     });
 

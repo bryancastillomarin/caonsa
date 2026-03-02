@@ -14,7 +14,7 @@
 		<script src="main.js"></script>
 	</head>
 	<body class="bg-background-light text-slate-800 font-display antialiased">
-		<nav class="fixed w-full z-50 top-0 bg-secondary/95 backdrop-blur-sm border-b border-white/10 shadow-sm transition-all duration-300" id="navbar">
+		<nav class="fixed w-full z-20 top-0 bg-secondary/95 backdrop-blur-sm border-b border-white/10 shadow-sm transition-all duration-300" id="navbar">
 			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				<div class="flex justify-between items-center h-20">
 					<div class="flex-shrink-0 flex items-center gap-3 cursor-pointer">
@@ -351,7 +351,7 @@
 							alt=""
 							class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
 							data-alt=""
-							src="./assets/img/aeropuerto_cancun.JPG" />
+							src="./assets/img/aeropuerto_cancun.jpg" />
 						<div
 							class="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
 						<div class="absolute bottom-0 left-0 p-8 w-full">
@@ -591,35 +591,8 @@
 			</div>
 		</footer>
 		<div class="bg-background-light dark:bg-black text-gray-900 dark:text-gray-100 font-display min-h-screen flex flex-col relative overflow-hidden hidden" id="modal">
-			<div class="absolute inset-0 z-0 pointer-events-none opacity-50 blur-[2px]">
-				<header class="h-20 border-b border-gray-800 flex items-center px-12 justify-between bg-[#0e1f2f]">
-					<div class="w-32 h-8 bg-gray-700/50 rounded"></div>
-					<div class="flex gap-8">
-						<div class="w-20 h-4 bg-gray-700/30 rounded"></div>
-						<div class="w-20 h-4 bg-gray-700/30 rounded"></div>
-						<div class="w-20 h-4 bg-gray-700/30 rounded"></div>
-					</div>
-				</header>
-				<div class="p-12 grid grid-cols-3 gap-8 bg-[#0b1824] h-full">
-					<div class="h-64 bg-surface-dark rounded-lg opacity-50"></div>
-					<div class="h-64 bg-surface-dark rounded-lg opacity-50"></div>
-					<div class="h-64 bg-surface-dark rounded-lg opacity-50"></div>
-					<div class="h-64 bg-surface-dark rounded-lg opacity-50"></div>
-					<div class="h-64 bg-surface-dark rounded-lg opacity-50"></div>
-					<div class="h-64 bg-surface-dark rounded-lg opacity-50"></div>
-				</div>
-			</div>
-			<div class="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 lg:p-12 bg-black/80 backdrop-blur-sm transition-opacity duration-300" id="outerModal">
-				<button
-					class="absolute left-4 top-1/2 -translate-y-1/2 p-3 text-white/50 hover:text-primary hover:bg-white/5 rounded-full transition-all group hidden lg:flex items-center justify-center">
-					<span class="material-symbols-outlined text-4xl group-hover:-translate-x-1 transition-transform hidden">chevron_left</span>
-				</button>
-				<button
-					class="absolute right-4 top-1/2 -translate-y-1/2 p-3 text-white/50 hover:text-primary hover:bg-white/5 rounded-full transition-all group hidden lg:flex items-center justify-center">
-					<span class="material-symbols-outlined text-4xl group-hover:translate-x-1 transition-transform hidden">chevron_right</span>
-				</button>
-				<div
-					class="bg-secondary w-full max-w-6xl max-h-[90vh] rounded-lg shadow-2xl flex flex-col md:flex-row overflow-hidden relative border border-white/10">
+			<div class="fixed inset-0 z-20 flex items-center justify-center p-4 sm:p-6 lg:p-12 bg-black/80 backdrop-blur-sm transition-opacity duration-300" id="outerModal">
+				<div class="bg-secondary w-full max-w-6xl max-h-[90vh] rounded-lg shadow-2xl flex flex-col md:flex-row overflow-hidden relative border border-white/10">
 					<button
 						class="absolute top-4 right-4 z-20 p-2 text-white/70 hover:text-white bg-black/20 hover:bg-primary rounded-full transition-colors backdrop-blur-md group">
 						<span class="material-symbols-outlined text-xl group-hover:rotate-90 transition-transform duration-300" id="modalClose">close</span>
@@ -655,18 +628,33 @@
 						<div class="w-full h-64 md:h-80 lg:h-96 relative group overflow-hidden rounded-lg">
 							<img
 								alt=""
-								class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+								class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 cursor-pointer"
 								data-alt=""
 								id="modalImage1"/>
 						</div>
 						<div class="w-full h-64 md:h-80 lg:h-96 relative group overflow-hidden rounded-lg">
 							<img
 								alt=""
-								class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+								class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 cursor-pointer"
 								data-alt=""
 								id="modalImage2"/>
 						</div>
 					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bg-background-light dark:bg-black text-gray-900 dark:text-gray-100 font-display min-h-screen flex flex-col relative overflow-hidden hidden" id="modalImage">
+			<div class="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 lg:p-12 bg-black/80 backdrop-blur-sm" id="outerModalImage">
+				<div class="bg-secondary max-w-6xl max-h-[90vh] rounded-lg shadow-2xl flex flex-col md:flex-row overflow-hidden relative border border-white/10">
+					<button
+						class="absolute top-4 right-4 z-50 p-2 text-white/70 hover:text-white bg-black/20 hover:bg-primary rounded-full transition-colors backdrop-blur-md group">
+						<span class="material-symbols-outlined text-xl group-hover:rotate-90 transition-transform duration-300" id="modalImageClose">close</span>
+					</button>
+					<img
+					alt=""
+					class="object-cover"
+					data-alt=""
+					id="modalImage3"/>
 				</div>
 			</div>
 		</div>
