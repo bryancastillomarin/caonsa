@@ -18,6 +18,9 @@ const projectsData = {
         description2: "Resultado: una infraestructura segura, con acabados de alta calidad y protección industrial de largo alcance.",
         imageUrl1: "./assets/img/puente_peatonal_modal_1.jpg",
         imageUrl2: "./assets/img/puente_peatonal_modal_2.JPG",
+        imageUrl3: "./assets/img/puente_peatonal_modal_3.JPG",
+        imageUrl4: "./assets/img/puente_peatonal_modal_4.JPG",
+        imageUrl5: "./assets/img/puente_peatonal_modal_5.JPG",
     },
     "hotelTulum": {
         title: "Hotel Tulum",
@@ -28,6 +31,9 @@ const projectsData = {
         description2: "Nos enfocamos en el cumplimiento de protocolos de alta durabilidad. Se realizó un proceso SMAQ con electrodos de alta eficiencia, garantizando uniones sólidas y resistentes. La trazabilidad del proyecto se respaldó con la certificación de nuestro personal ante la AWS, asegurando que cada punto de unión cumpla con las pruebas de carga y resistencia requeridas por la dirección de la obra.",
         imageUrl1: "./assets/img/hotel_tulum_modal_1.jpeg",
         imageUrl2: "./assets/img/hotel_tulum_modal_2.jpeg",
+        imageUrl3: "./assets/img/hotel_tulum_modal_3.jpeg",
+        imageUrl4: "./assets/img/hotel_tulum_modal_4.jpeg",
+        imageUrl5: "./assets/img/hotel_tulum_modal_5.jpeg",
     },
     "aeropuertoCancun": {
         title: "Aeropuerto Cancún",
@@ -38,6 +44,9 @@ const projectsData = {
         description2: "Gracias al dominio de procesos multitécnicos (FCAW, GMAW y SMAW), logramos optimizar los tiempos de entrega sin comprometer la precisión técnica requerida por la dirección de obra. ",
         imageUrl1: "./assets/img/aeropuerto_cancun_modal_1.jpg",
         imageUrl2: "./assets/img/aeropuerto_cancun_modal_2.jpg",
+        imageUrl3: "./assets/img/aeropuerto_cancun_modal_3.jpg",
+        imageUrl4: "./assets/img/aeropuerto_cancun_modal_4.jpg",
+        imageUrl5: "./assets/img/aeropuerto_cancun_modal_5.jpg"
     },
     "trenMaya": {
         title: "Tren Maya",
@@ -47,7 +56,10 @@ const projectsData = {
         description1: "Ejecución de fabricación y reparaciones estructurales críticas para el proyecto prioritario del Tren Maya. El desarrollo se realizó bajo la estricta supervisión de Grupo INDI, cumpliendo con los más altos estándares de seguridad y calidad técnica. Se implementaron procesos de soldadura especializada FCAW para alta productividad y SMAW para montajes de precisión en campo, todos alineados a la normativa internacional AWS (American Welding Society).",
         description2: "La intervención garantizó la integridad mecánica de los componentes esenciales para la operatividad del sistema ferroviario.",
         imageUrl1: "./assets/img/tren_maya_modal_1.jpg",
-        imageUrl2: "./assets/img/tren_maya_modal_2.jpg"
+        imageUrl2: "./assets/img/tren_maya_modal_2.jpg",
+        imageUrl3: "./assets/img/tren_maya_modal_3.jpg",
+        imageUrl4: "./assets/img/tren_maya_modal_4.jpg",
+        imageUrl5: "./assets/img/tren_maya_modal_5.jpg"
     },
     "domosChetumal": {
         title: "Domos Chetumal",
@@ -57,7 +69,10 @@ const projectsData = {
         description1: "Diseño, fabricación y montaje de estructuras metálicas para techumbres (domos) en diversas instituciones de educación pública.",
         description2: "El proyecto se centró en proporcionar espacios seguros y protegidos para el desarrollo de actividades académicas y deportivas. Se empleó el proceso de soldadura SMAW (Shielded Metal Arc Welding) para garantizar uniones de alta resistencia mecánica, cumpliendo con las normas de seguridad estructural vigentes para edificios de concurrencia masiva.",
         imageUrl1: "./assets/img/domos_chetumal_modal_1.jpg",
-        imageUrl2: "./assets/img/domos_chetumal_modal_2.jpg"
+        imageUrl2: "./assets/img/domos_chetumal_modal_2.jpg",
+        imageUrl3: "./assets/img/domos_chetumal_modal_3.jpg",
+        imageUrl4: "./assets/img/domos_chetumal_modal_4.jpg",
+        imageUrl5: "./assets/img/domos_chetumal_modal_5.jpg"
     },
     "refineriaOlmeca": {
         title: "Refinería Olmeca",
@@ -67,7 +82,10 @@ const projectsData = {
         description1: "Fabricación y habilitado de tubería de 4\" de diámetro para red de seguridad industrial. ",
         description2: "El proceso incluyó el rolado de precisión y la integración de accesorios especializados mediante soldadura de alta integridad en tredolets, bridas y soportes estructurales. Toda la ejecución se realizó bajo normativas internacionales de seguridad petroquímica, garantizando la estanqueidad y resistencia del sistema ante condiciones de alta presión.",
         imageUrl1: "./assets/img/refineria_olmeca_modal_1.jpg",
-        imageUrl2: "./assets/img/refineria_olmeca_modal_2.jpg"
+        imageUrl2: "./assets/img/refineria_olmeca_modal_2.jpg",
+        imageUrl3: "./assets/img/refineria_olmeca_modal_3.jpg",
+        imageUrl4: "./assets/img/refineria_olmeca_modal_4.jpg",
+        imageUrl5: "./assets/img/refineria_olmeca_modal_5.jpg"
     }
 }
 
@@ -85,6 +103,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const modalImage1 = document.getElementById("modalImage1");
     const modalImage2 = document.getElementById("modalImage2");
     const modalImage3 = document.getElementById("modalImage3");
+    const modalImage4 = document.getElementById("modalImage4");
+    const modalImage5 = document.getElementById("modalImage5");
+    const modalImageFull = document.getElementById("modalImageFull");
     const menuButton = document.getElementById("menuButton");
     const menuButtonClose = document.getElementById("menuButtonClose");
     const menu = document.getElementById("menu");
@@ -138,6 +159,9 @@ document.addEventListener('DOMContentLoaded', function() {
         modalDescription2.textContent = project.description2;
         modalImage1.src = project.imageUrl1;
         modalImage2.src = project.imageUrl2;
+        modalImage3.src = project.imageUrl3;
+        modalImage4.src = project.imageUrl4;
+        modalImage5.src = project.imageUrl5;
     }
 
     modalImage1.addEventListener("click", function(e) {
@@ -148,13 +172,24 @@ document.addEventListener('DOMContentLoaded', function() {
         showImageModal(e.target.src);
     });
 
+    modalImage3.addEventListener("click", function(e) {
+        showImageModal(e.target.src);
+    });
+
+    modalImage4.addEventListener("click", function(e) {
+        showImageModal(e.target.src);
+    });
+
+    modalImage5.addEventListener("click", function(e) {
+        showImageModal(e.target.src);
+    });
+
     function showImageModal(src) {
         modal.classList.add("hidden");
         modalImage.classList.remove("hidden");
-        modalImage3.src = src;
+        modalImageFull.src = src;
         isModalOpen = false;
         isModalImageOpen = true;
-        console.log({isModalOpen, isModalImageOpen});
     }
 
     modal.addEventListener("click", function(event) {

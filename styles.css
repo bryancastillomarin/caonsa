@@ -2208,3 +2208,11 @@ video {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px;
 }
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.h-50 {
+  min-height: 50vh;
+}
