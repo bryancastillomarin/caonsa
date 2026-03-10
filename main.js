@@ -20,7 +20,7 @@ const projectsData = {
         imageUrl2: "./assets/img/puente_peatonal_modal_2_v1.jpg",
         imageUrl3: "./assets/img/puente_peatonal_modal_3_v1.jpg",
         imageUrl4: "./assets/img/puente_peatonal_modal_4_v1.jpg",
-        imageUrl5: "./assets/img/puente_peatonal_modal_5_v1.jpg",
+        imageUrl5: "./assets/img/puente_peatonal_modal_5_v2.jpg",
     },
     "hotelTulum": {
         title: "Hotel Tulum",
@@ -68,10 +68,10 @@ const projectsData = {
         location: "Chetumal",
         description1: "Diseño, fabricación y montaje de estructuras metálicas para techumbres (domos) en diversas instituciones de educación pública.",
         description2: "El proyecto se centró en proporcionar espacios seguros y protegidos para el desarrollo de actividades académicas y deportivas. Se empleó el proceso de soldadura SMAW (Shielded Metal Arc Welding) para garantizar uniones de alta resistencia mecánica, cumpliendo con las normas de seguridad estructural vigentes para edificios de concurrencia masiva.",
-        imageUrl1: "./assets/img/domos_chetumal_modal_1_v1.jpg",
-        imageUrl2: "./assets/img/domos_chetumal_modal_2_v1.jpg",
-        imageUrl3: "./assets/img/domos_chetumal_modal_3_v1.jpg",
-        imageUrl4: "./assets/img/domos_chetumal_modal_4_v1.jpg",
+        imageUrl1: "./assets/img/domos_chetumal_modal_1_v2.jpg",
+        imageUrl2: "./assets/img/domos_chetumal_modal_2_v2.jpg",
+        imageUrl3: "./assets/img/domos_chetumal_modal_3_v2.jpg",
+        imageUrl4: "./assets/img/domos_chetumal_modal_4_v2.jpg",
         imageUrl5: "./assets/img/domos_chetumal_modal_5_v1.jpg"
     },
     "refineriaOlmeca": {
